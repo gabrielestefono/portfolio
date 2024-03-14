@@ -13,6 +13,7 @@ export default function Header(){
 					height={92}
 					sizes="(min-width: 480px) 100px, (min-width: 576px) 100px, (min-width: 768px) 100px, (min-width: 992px) 100px, (min-width: 1200px) 100px, 198px"
 					className={styles.logo}
+					loading="eager"
 					/>
 				<div>
 					<ul>
