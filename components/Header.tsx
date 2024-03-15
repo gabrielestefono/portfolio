@@ -5,14 +5,13 @@ import styles from './Header.module.scss';
 
 export default function Header(){
 	return (
-		<header>
+		<header className={styles.header}>
 			<div>
 				<Image src={logoDesktop}
 					alt="WeBest"
 					width={198}
 					height={92}
 					sizes="(min-width: 480px) 100px, (min-width: 576px) 100px, (min-width: 768px) 100px, (min-width: 992px) 100px, (min-width: 1200px) 100px, 198px"
-					className={styles.logo}
 					loading="eager"
 					/>
 				<div>
