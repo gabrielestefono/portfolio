@@ -4,11 +4,6 @@ export default function Document() {
   return (
     <Html lang="pt-br">
       <Head>
-        <title>WeBest - Página Inicial</title>
-        {/* <meta charset="UTF-8"/> */}
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <title>Título da sua página</title>
-
         <meta name="description" content="Descrição da sua página"/>
         <meta name="keywords" content="palavras-chave, relevantes, para, sua, página"/>
         <meta name="robots" content="index,follow"/>

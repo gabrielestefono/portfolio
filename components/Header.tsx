@@ -2,6 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 import logoDesktop from './logoDesktop.png';
 import styles from './Header.module.scss';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars } from "@fortawesome/free-solid-svg-icons/faBars";
 
 export default function Header(){
 	return (
@@ -11,10 +13,11 @@ export default function Header(){
 					alt="WeBest"
 					width={198}
 					height={92}
+					className={styles.logo}
 					sizes="(min-width: 480px) 100px, (min-width: 576px) 100px, (min-width: 768px) 100px, (min-width: 992px) 100px, (min-width: 1200px) 100px, 198px"
 					loading="eager"
 					/>
-				<div>
+				<div className={styles.menu}>
 					<ul>
 						<li><Link href=""/>Início</li>
 						<li><Link href=""/>Sobre Mim</li>
@@ -24,6 +27,9 @@ export default function Header(){
 						{/* <li><Link href=""/>Blog</li> */}
 						{/* <li><Link href=""/>Login</li> */}
 					</ul>
+				</div>
+				<div className={styles.mobileIcon}>
+					<FontAwesomeIcon icon={faBars} className={styles.icon}/>
 				</div>
 			</div>
 		</header>
