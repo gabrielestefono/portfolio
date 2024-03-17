@@ -1,4 +1,5 @@
 .header{
+	@import '../styles/variaveis';
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -8,6 +9,7 @@
 		width: 100vw;
 		justify-content: space-between;
 		align-items: center;
+		position: relative;
 
 		> .logo{
 			width: 6.25rem;
@@ -19,11 +21,50 @@
 			display: none;
 		}
 
+		> .menuAberto{
+			position: absolute;
+			width: 100vw;
+			left: 0;
+			top: 2.875rem;
+			background-color: $branco;
+			height: calc(100vh - 2.875rem);
+			display: flex;
+			justify-content: center;
+
+			> ul{
+				width: 100%;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				gap: 1.25rem;
+				margin-top: 2rem;
+
+				> li{
+					cursor: pointer;
+					font-size: 1.25rem;
+					font-weight: 500;
+					color: $cinza-texto;
+					font-family: $poppins;
+					line-height: 1.25;
+					padding-bottom: 0.4375rem;
+
+					&:hover{
+						color: $cor-primaria;
+						border-bottom: 2px solid $cor-primaria;
+						padding-bottom: 0.3125rem;
+					}
+				}
+			}
+		}
+
 		.mobileIcon{
 			width: 1.25rem;
 			height: 1.25rem;
+			box-sizing: content-box;
 			padding: 10px;
 			cursor: pointer;
+			border: none;
+			background-color: transparent;
 
 			.icon{
 				width: 100%;

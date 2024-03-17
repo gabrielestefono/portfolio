@@ -4,8 +4,16 @@ import logoDesktop from './logoDesktop.png';
 import styles from './Header.module.scss';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons/faBars";
+import { useState } from "react";
 
 export default function Header(){
+	
+	const [menu, setMenu] = useState(false);
+
+	let abrirMenu = () => {
+		setMenu(!menu);
+	}
+
 	return (
 		<header className={styles.header}>
 			<div>
@@ -17,7 +25,7 @@ export default function Header(){
 					sizes="(min-width: 480px) 100px, (min-width: 576px) 100px, (min-width: 768px) 100px, (min-width: 992px) 100px, (min-width: 1200px) 100px, 198px"
 					loading="eager"
 					/>
-				<div className={styles.menu}>
+				<div className={menu ? styles.menuAberto : styles.menu}>
 					<ul>
 						<li><Link href=""/>Início</li>
 						<li><Link href=""/>Sobre Mim</li>
@@ -28,9 +36,9 @@ export default function Header(){
 						{/* <li><Link href=""/>Login</li> */}
 					</ul>
 				</div>
-				<div className={styles.mobileIcon}>
+				<button className={styles.mobileIcon} onClick={abrirMenu}>
 					<FontAwesomeIcon icon={faBars} className={styles.icon}/>
-				</div>
+				</button>
 			</div>
 		</header>
 	);
